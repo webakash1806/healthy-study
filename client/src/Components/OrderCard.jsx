@@ -21,9 +21,9 @@ const OrderCard = ({ data }) => {
                         </div>
                     </div>
                 </div > :
-                <div className='shadow-[0px_0px_5px_#808080] w-[18rem] flex flex-col justify-between rounded-xl overflow-hidden text-black bg-gray'>
+                <div className='shadow-[0px_0px_5px_#808080] w-[20rem] flex flex-col justify-between rounded-xl overflow-hidden text-black bg-gray'>
                     <div className='flex items-center justify-center gap-10 p-1 font-semibold text-white bg-red'><p>{orderDate}</p> <p className=''>{orderTime}</p></div>
-                    <h1 className='text-center'>Order id: {data?._id}</h1>
+                    <h1 className='p-1 tracking-wide text-center uppercase'>Order id: {data?._id}</h1>
                     <div className=''>
                         <div className='pb-2 m-2 mx-3 mb-0 bg-white rounded-md'>
                             <div className='flex items-center border-[#808080c0] justify-between p-2 pb-3 mx-3 mr-10'>

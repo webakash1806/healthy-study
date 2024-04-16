@@ -14,7 +14,7 @@ export const getOrder = createAsyncThunk('/order/get', async () => {
         const response = await axiosInstance.get('/order/all')
         return response.data.order
     } catch (e) {
-        return toast.error("Failed to load!")
+        return toast.error("Login please!")
     }
 })
 
@@ -32,7 +32,7 @@ export const getMyOrders = createAsyncThunk('/order/my-order', async () => {
         const response = await axiosInstance.get('/order/my-orders')
         return response.data.order
     } catch (e) {
-        return toast.error("Failed to load!")
+        return toast.error("Login please!")
     }
 })
 

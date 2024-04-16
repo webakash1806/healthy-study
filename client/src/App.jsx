@@ -16,6 +16,8 @@ import Dashboard from './Pages/Admin/Dashboard'
 import DeliveryDetail from './Pages/UserAuth/DeliveryDetail'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
+import Success from './Components/Success'
+import Failed from './Components/Failed'
 const App = () => {
   return (
     <Routes>
@@ -33,6 +35,8 @@ const App = () => {
         <Route path='/changePassword' element={<ChangePassword />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/delivery/detail' element={<DeliveryDetail />} />
+        <Route path='/order/success' element={<Success />} />
+        <Route path='/order/fail' element={<Failed />} />
       </Route>
 
       <Route element={<RequireAuth allowedRoles={['ADMIN']} />}>

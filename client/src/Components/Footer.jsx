@@ -25,11 +25,11 @@ const Footer = () => {
                         <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsEnvelope /><span>itsakash18.06@gmail.com</span></a>
                         <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsTelephone /><span>+91 6207234759</span></a>
                         <div className='flex gap-6 mt-3'>
-                            <a href="" className='text-[17px]'><BsLinkedin /></a>
-                            <a href="" className='text-[17px]'><BsFacebook /></a>
-                            <a href="" className='text-[17px]'><BsWhatsapp /></a>
-                            <a href="" className='text-[17px]'><BsInstagram /></a>
-                            <a href="" className='text-[17px]'><BsTwitter /></a>
+                            <Link to="" target='_blank' className='text-[17px]'><BsLinkedin /></Link>
+                            <Link to="" target='_blank' className='text-[17px]'><BsFacebook /></Link>
+                            <Link to="" target='_blank' className='text-[17px]'><BsWhatsapp /></Link>
+                            <Link to="" target='_blank' className='text-[17px]'><BsInstagram /></Link>
+                            <Link to="" target='_blank' className='text-[17px]'><BsTwitter /></Link>
                         </div>
                     </div>
                     <div className='flex flex-col gap-8 sm:flex-row sm:justify-around sm:mr-5 md:mr-[5rem] md:gap-[5rem]'>

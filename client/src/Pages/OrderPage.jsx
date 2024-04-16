@@ -31,7 +31,7 @@ const OrderPage = () => {
         <HomeLayout>
             <div className='flex flex-col items-center justify-start pt-2 pb-10 bg-white min-h-[80vh]'>
                 <h1 className='font-bold border-b-4 border-gray text-red md:text-[2rem] text-[1.5rem]'>My orders</h1>
-                {orderData == [] ?
+                {orderData?.length == 0 || !orderData ?
                     <div className='flex flex-col gap-8 mt-1 lg:w-[80vw] items-center justify-center'>
                         <div className='flex flex-col items-center justify-center gap-4 pt-10 my-4 text-black'>
                             <p className='text-[1rem]'> <span className='font-semibold text-[1.1rem] text-red'>OOPS!</span> No order placed till now</p>

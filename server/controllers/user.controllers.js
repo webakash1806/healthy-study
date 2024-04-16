@@ -104,7 +104,7 @@ const register = async (req, res, next) => {
             user.confirmPassword = undefined
             res.status(201).json({
                 success: true,
-                message: 'User registered Successfully',
+                message: 'Registered Successfully',
                 user
             })
         }
@@ -216,7 +216,7 @@ const profile = async (req, res, next) => {
         // Sending user details as a JSON response
         res.status(200).json({
             success: true,
-            message: "User Details",
+            message: "",
             user
         })
     }

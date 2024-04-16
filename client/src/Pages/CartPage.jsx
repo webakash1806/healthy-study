@@ -11,6 +11,7 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { getUserOrder } from '../Redux/Slices/OrderSlice'
 import SkeletonLoading from '../Components/SkeletonLoading'
+import logoImg from '../assets/healthyStudy.jpg'
 
 const CartPage = () => {
     const cartData = useSelector((state) => state?.cart)
@@ -75,8 +76,6 @@ const CartPage = () => {
     const razorpayKey = useSelector((state) => state?.razorpay?.key)
     const order_id = useSelector((state) => state?.razorpay?.orderId)
 
-    console.log(order_id)
-
     // const isPaymentVerified = useSelector((state) => state?.razorpay?.isPaymentsVerified)
     const paymentDetails = {
         razorpay_payment_id: "",
@@ -94,9 +93,9 @@ const CartPage = () => {
                 key: razorpayKey, // Enter the Key ID generated from the Dashboard
                 amount: totalBill * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                 currency: "INR",
-                name: "Acme Corp", //your business name
-                description: "Test Transaction",
-                image: "https://example.com/your_logo",
+                name: "Healthy Study", //your business name
+                description: "",
+                image: logoImg,
                 order_id: order_id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
                 handler: async function (res) {
                     console.log(res)
@@ -112,15 +111,15 @@ const CartPage = () => {
                     response?.payload?.success ? navigate('/order') : navigate('/order/fail')
                 },
                 prefill: { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
-                    "name": "Gaurav Kumar", //your customer's name
-                    "email": "gaurav.kumar@example.com",
-                    "contact": "9000090000"  //Provide the customer's phone number for better conversion rates 
+                    "name": userData?.data?.fullName, //your customer's name
+                    "email": userData?.data?.email,
+                    "contact": userData?.data?.phoneNumber  //Provide the customer's phone number for better conversion rates 
                 },
                 notes: {
-                    "address": "Razorpay Corporate Office"
+                    "address": "Healthy Study Office"
                 },
                 theme: {
-                    "color": "#3399cc"
+                    "color": "#FC683E"
                 }
             };
             const razor = new window.Razorpay(options);
@@ -131,48 +130,42 @@ const CartPage = () => {
         }
     }
 
+
     useEffect(() => {
         dispatch(getRazorpayId())
         loadCartData()
     }, [])
     return (
         <HomeLayout>
-            <div className='flex flex-col items-center justify-center pt-2 bg-white min-h-[80vh]'>
+            <div className='flex flex-col items-center justify-start pt-2 bg-white min-h-[80vh]'>
                 <h1 className='font-bold border-b-4 border-gray text-red md:text-[2rem] text-[1.5rem]'>Cart</h1>
-                {cartItemData ?
-                    <div>
-                        {cartItemData?.length != 0 ?
-                            <div className='flex flex-wrap gap-8 mt-4 lg:w-[80vw] items-center justify-center'>
-                                {
-                                    cartItemData?.map((res) => {
-                                        return <CartCard key={res._id} data={res} cartId={cartId} />
-                                    })
-                                }
-                            </div> :
-                            <div className='flex flex-wrap gap-8 my-4 lg:w-[80vw] items-center justify-center'>
-                                <div className='flex flex-col items-center justify-center gap-4 pt-10 my-4 text-black'>
-                                    <p className='text-[1rem]'> <span className='font-semibold text-[1.1rem] text-red'>OOPS!</span> Nothing in cart</p>
-                                    <button onClick={() => navigate('/')} className='p-1 px-5 font-semibold text-white rounded-md bg-red'>Order now</button>
-                                </div>
-                            </div>}
-
-
+                {cartItemData?.length == 0 || !cartItemData ?
+                    <div className='flex flex-wrap gap-8 my-4 lg:w-[80vw] items-center justify-center'>
+                        <div className='flex flex-col items-center justify-center gap-4 pt-10 my-4 text-black'>
+                            <p className='text-[1rem]'> <span className='font-semibold text-[1.1rem] text-red'>OOPS!</span> Nothing in cart</p>
+                            <button onClick={() => navigate('/')} className='p-1 px-5 font-semibold text-white rounded-md bg-red'>Add now!</button>
+                        </div>
                     </div> :
-                    <div className='mt-8'>
-                        <SkeletonLoading />
+                    <div className='flex flex-wrap gap-8 mt-4 lg:w-[80vw] items-center justify-center'>
+                        {
+                            cartItemData?.map((res) => {
+                                return <CartCard key={res._id} data={res} cartId={cartId} />
+                            })
+                        }
+                        <div className={`${cartItemData?.length == 0 ? "hidden" : "sticky"} bottom-0 flex items-center justify-center w-full p-3 px-5 mt-10 bg-gray`}>
+                            <div className=' bg-light w-[20rem] flex flex-col justify-between rounded-xl overflow-hidden text-black '>
+                                <h2 className='p-1 font-semibold text-[1.1rem] bg-transparent'>Bill Summary</h2>
+                                <div className='font-[500] bg-white'>
+                                    <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-b border-dashed'><p className='flex items-center gap-2 text-[1.1rem]'><IoBagHandle /><span className='text-[0.85rem]'>Item Total</span></p><p className='text-[0.85rem] tracking-wide'>&#8377;{totalBill}</p></div>
+                                    <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-b border-dashed'><p className='flex items-center gap-2 text-[1.1rem]'><MdDeliveryDining /><span className='text-[0.85rem]'>Delivery partner fee</span></p><p className='text-[0.85rem] tracking-wide'><strike className="mr-1 font-normal">&#8377;15</strike>FREE</p></div>
+                                    <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-t border-dashed mt-1'><p className='flex items-center gap-2 text-[0.98rem]'>Grand Total</p><p className='text-[0.9rem] tracking-wide'>&#8377;{totalBill}</p></div>
+                                </div>
+                                <button onClick={checkoutHandler} className='w-full p-1 px-5 font-semibold text-white bg-red'>Proceed to order</button>
+                            </div >
+                        </div>
                     </div>
                 }
-                <div className={`${cartItemData?.length == 0 ? "hidden" : "sticky"} bottom-0 flex items-center justify-center w-full p-3 px-5 mt-10 bg-gray`}>
-                    <div className=' bg-light w-[20rem] flex flex-col justify-between rounded-xl overflow-hidden text-black '>
-                        <h2 className='p-1 font-semibold text-[1.1rem] bg-transparent'>Bill Summary</h2>
-                        <div className='font-[500] bg-white'>
-                            <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-b border-dashed'><p className='flex items-center gap-2 text-[1.1rem]'><IoBagHandle /><span className='text-[0.85rem]'>Item Total</span></p><p className='text-[0.85rem] tracking-wide'>&#8377;{totalBill}</p></div>
-                            <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-b border-dashed'><p className='flex items-center gap-2 text-[1.1rem]'><MdDeliveryDining /><span className='text-[0.85rem]'>Delivery partner fee</span></p><p className='text-[0.85rem] tracking-wide'><strike className="mr-1 font-normal">&#8377;15</strike>FREE</p></div>
-                            <div className='flex items-center border-[#808080c0] justify-between p-1 mx-3 border-t border-dashed mt-1'><p className='flex items-center gap-2 text-[0.98rem]'>Grand Total</p><p className='text-[0.9rem] tracking-wide'>&#8377;{totalBill}</p></div>
-                        </div>
-                        <button onClick={checkoutHandler} className='w-full p-1 px-5 font-semibold text-white bg-red'>Proceed to order</button>
-                    </div >
-                </div>
+
             </div>
         </HomeLayout>
     )

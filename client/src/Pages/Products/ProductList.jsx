@@ -10,8 +10,7 @@ const ProductList = () => {
     const dispatch = useDispatch()
 
     const { productData } = useSelector((state) => state.product)
-    const cartData = useSelector((state) => state?.cart)
-    console.log(cartData)
+    // const cartData = useSelector((state) => state?.cart)
 
     async function loadProduct() {
         await dispatch(getAllProduct())
