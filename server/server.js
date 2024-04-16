@@ -3,7 +3,7 @@ import connectionToDB from "./config/dbConnection.js"
 import cloudinary from 'cloudinary'
 import Razorpay from 'razorpay'
 
-const PORT = 5500 || process.env.PORT
+const PORT = 8000 || process.env.PORT
 
 // Cloudinary
 
