@@ -30,13 +30,12 @@ app.use(cookieParser())
 
 app.use(cors({
     origin: [process.env.FRONTEND_URL],
-    headers: ["Content-Type"],
-    credentials: true,
+    // methods: 'GET,POST', // Add other HTTP methods as needed
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true // Add other headers as needed
 }));
-// app.use(cors({
-//     origin: [process.env.FRONTEND_URL],
-//     credentials: true
-// }))
+
+
 
 // Applying the 'dev' format logging to all routes
 app.use(morgan('dev'))
