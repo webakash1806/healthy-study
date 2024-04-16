@@ -27,10 +27,16 @@ app.use(cookieParser())
 // Example usage:
 // If the 'FRONTEND_URL' is set to 'https://example.com', then only requests
 // originating from 'https://example.com' will be allowed, and credentials will be included.
+
 app.use(cors({
     origin: [process.env.FRONTEND_URL],
-    credentials: true
-}))
+    headers: ["Content-Type"],
+    credentials: true,
+}));
+// app.use(cors({
+//     origin: [process.env.FRONTEND_URL],
+//     credentials: true
+// }))
 
 // Applying the 'dev' format logging to all routes
 app.use(morgan('dev'))
