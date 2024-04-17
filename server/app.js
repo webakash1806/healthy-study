@@ -28,7 +28,10 @@ app.use(cookieParser())
 // If the 'FRONTEND_URL' is set to 'https://example.com', then only requests
 // originating from 'https://example.com' will be allowed, and credentials will be included.
 
-app.use(cors());
+app.use(cors({
+    origin: [process.env.FRONTEND_URL],
+    credentials: true
+}))
 
 
 

@@ -155,7 +155,10 @@ const login = async (req, res, next) => {
 
         // Generating JWT token and setting it as a cookie
         const token = await user.generateJWTToken()
-        res.cookie('token', token, cookieOption)
+        const a = res.cookie('token', token, cookieOption)
+
+        console.log(1)
+        console.log(a)
 
         // Sending success response to the client
         res.status(200).json({
