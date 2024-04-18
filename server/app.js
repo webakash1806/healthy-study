@@ -14,6 +14,13 @@ config()
 // Creating an instance of the Express application
 const app = express()
 
+console.log(process.env.FRONTEND_URL)
+
+app.use(cors({
+    origin: [process.env.FRONTEND_URL],
+    credentials: true
+}))
+
 // Middleware setup to parse URL-encoded data
 app.use(express.urlencoded({ extended: true }));
 
@@ -28,10 +35,7 @@ app.use(cookieParser())
 // If the 'FRONTEND_URL' is set to 'https://example.com', then only requests
 // originating from 'https://example.com' will be allowed, and credentials will be included.
 
-app.use(cors({
-    origin: [process.env.FRONTEND_URL],
-    credentials: true
-}))
+
 
 
 

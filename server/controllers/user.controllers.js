@@ -9,11 +9,10 @@ import crypto from 'crypto'
 /* The below code is defining an object called `cookieOption` with properties that specify options for
 a cookie. */
 const cookieOption = {
-    maxAge: 7 * 24 * 60 * 60 * 1000,
+    secure: process.env.NODE_ENV === 'production' ? true : false,
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     httpOnly: true,
-    secure: true,
-    sameSite: 'None',
-}
+};
 
 /**
  * The `register` function is an asynchronous function that handles the registration process for a
@@ -155,10 +154,8 @@ const login = async (req, res, next) => {
 
         // Generating JWT token and setting it as a cookie
         const token = await user.generateJWTToken()
-        const a = res.cookie('token', token, cookieOption)
+        res.cookie('token', token, cookieOption)
 
-        console.log(1)
-        console.log(a)
 
         // Sending success response to the client
         res.status(200).json({
