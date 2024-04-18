@@ -5,6 +5,9 @@ import { deleteCartItem, updateCart } from '../Redux/Slices/CartSlice';
 import { useNavigate } from 'react-router-dom';
 import SkeletonLoading from './SkeletonLoading';
 const CartCard = ({ data, cartId }) => {
+
+    const [price, setPrice] = useState(0)
+
     const [count, setCount] = useState(data?.quantity)
     const dec = () => {
         if (count > 1) {
@@ -12,8 +15,12 @@ const CartCard = ({ data, cartId }) => {
         }
     }
 
+
     const itemId = data?._id
-    const price = data?.product?.price
+
+    const priceAfterDiscount = () => {
+        setPrice(data?.product?.price - (0.25 * 100))
+    }
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -46,7 +53,7 @@ const CartCard = ({ data, cartId }) => {
     }
 
     useEffect(() => {
-
+        priceAfterDiscount()
     }, [data, count])
 
     return (
