@@ -65,7 +65,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='text-center text-[1.05rem] font-[600] p-3 border-t'><span>&#169;</span> {year} | Copyright webakash1806</div>
+                <div className='text-center text-[1.05rem] font-[600] p-3 border-t'><span>&#169;</span> {year} | Copyright Healthy Study</div>
             </footer>
         </>
     )
