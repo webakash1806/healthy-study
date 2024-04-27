@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaPhoneAlt, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { CiFacebook } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
 import HomeLayout from '../Layouts/HomeLayout';
 
@@ -11,21 +12,21 @@ const Contact = () => {
                 >
                     <p className='py-[1rem] text-[2.4rem] bg-clip-text text-transparent bg-[linear-gradient(to_right,#35C8F2,#27B872)] md:text-[3rem]  font-mono font-bold text-center'>Let's have a talk</p>
                     <div className='text-black grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 text-[17px] w-fit'>
-                        <a href={`tel:+916207234759`} className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold  gap-2 bg-white '>
+                        <a href={`tel:9140827671`} className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold  gap-2 bg-white '>
                             <FaPhoneAlt className='text-[#1d7f20] text-[20px]' />
-                            <p>+91 9876543210</p>
+                            <p>+91 9140827671</p>
                         </a>
-                        <a href={`mailto:itsakash18.06@gmail.com`} className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a href={`mailto:healthystudybhu@gmail.com`} className='w-[19srem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <IoMdMail className='text-[#EA4335] text-[20px]' />
-                            <p>itsakash18.06@gmail.com</p>
+                            <p>healthystudybhu@gmail.com</p>
                         </a>
-                        <a target={`_blank`} href="https://github.com/webakash1806" className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a target={`_blank`} href="https://wa.me/9140827671" className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <FaWhatsapp className='text-[#161a16] text-[20px]' />
-                            <p>+91 1234567890</p>
+                            <p>+91 9140827671 </p>
                         </a>
-                        <a target={`_blank`} href="https://www.linkedin.com/in/itsakash18/" className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
-                            <FaLinkedin className='text-[#3766ff] text-[20px]' />
-                            <p>itsakash18</p>
+                        <a target={`_blank`} href="https://www.linkedin.com/in/itsakash18/" className='w-[18rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                            <CiFacebook className='text-[#3766ff] text-[20px]' />
+                            <p>healthystudybhu@gmail.com</p>
                         </a>
                     </div>
                     <form action="https://formspree.io/f/myyqbdzv" method='POST' className='flex flex-col items-center justify-center w-screen gap-4 pt-6 text-white'>
@@ -44,7 +45,10 @@ const Contact = () => {
                                     placeholder='your email'
                                     autoComplete='off'
                                     required className='bg-transparent border-b p-[0.5px_5px] w-[14rem] text-center text-[17px] text-[#17fbd1] m-1 outline-none' />
-                                <br /> and
+                                
+                                and
+                                {/* <br>my phone Number is</br>
+                                <input type="number" placeholder='your number' /> */}
                                 <br />I would like to discuss about
                                 <br />
                                 <textarea name="message" placeholder='Write Message...'
