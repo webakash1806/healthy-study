@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className='mb-3'><img className='w-[8rem]' src="" alt="" /></div>
                         {/* <img src="" alt="" /> */}
                         <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsEnvelope /><span>healthystudybhu@gmail.com</span></a>
-                        <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsTelephone /><span>+9140827671</span></a>
+                        <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsTelephone /><span>+91 9140827671</span></a>
                         <div className='flex gap-6 mt-3'>
                             <Link to="" target='_blank' className='text-[17px]'><BsLinkedin /></Link>
                             <Link to="" target='_blank' className='text-[17px]'><BsFacebook /></Link>
