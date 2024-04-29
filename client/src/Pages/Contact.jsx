@@ -61,7 +61,7 @@ const Contact = () => {
                         </div>
                     </form>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3165540293458!2d84.3656415749541!3d24.750333349656273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398cfdcad948d435%3A0x9489d29d4efc8c6e!2sMG%20Rd%2C%20Aurangabad%2C%20Bihar%20824101!5e0!3m2!1sen!2sin!4v1696148532454!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.9835344276644!2d82.97985107359912!3d25.271139328705143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31b7a920b513%3A0x2cb948837eeea5f8!2sAtal%20Incubation%20Centre!5e0!3m2!1sen!2sin!4v1714390559539!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </HomeLayout>
     )
