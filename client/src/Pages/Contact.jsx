@@ -24,7 +24,7 @@ const Contact = () => {
                             <FaWhatsapp className='text-[#161a16] text-[20px]' />
                             <p>+91 9140827671 </p>
                         </a>
-                        <a target={`_blank`} href="https://www.linkedin.com/in/itsakash18/" className='w-[18rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a target={`_blank`} href="https://www.facebook.com/profile.php?id=61557356498283" className='w-[18rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <CiFacebook className='text-[#3766ff] text-[20px]' />
                             <p>healthystudybhu@gmail.com</p>
                         </a>
