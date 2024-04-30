@@ -6,6 +6,7 @@ import {
     BsLinkedin,
     BsTelephone,
     BsTwitter,
+    BsTwitterX,
     BsWhatsapp
 } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
@@ -29,7 +30,7 @@ const Footer = () => {
                             <Link to="https://www.facebook.com/profile.php?id=61557356498283" target='_blank' className='text-[20px] text-[#0862F7]'><BsFacebook /></Link>
                             <Link to="https://wa.me/9140827671" target='_blank' className='text-[20px] text-[#24CC63]'><BsWhatsapp /></Link>
                             <Link to="" target='_blank' className='text-[20px] text-[#F50864]'><BsInstagram /></Link>
-                            <Link to="" target='_blank' className='text-[20px] text-[#1C9BE9]'><BsTwitter /></Link>
+                            <Link to="" target='_blank' className='text-[20px] '><BsTwitterX /></Link>
                         </div>
                     </div>
                     <div className='flex flex-col gap-8 sm:flex-row sm:justify-around sm:mr-5 md:mr-[5rem] md:gap-[5rem]'>

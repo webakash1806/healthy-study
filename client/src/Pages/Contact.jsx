@@ -4,6 +4,7 @@ import { CiFacebook } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
 import HomeLayout from '../Layouts/HomeLayout';
 
+
 const Contact = () => {
     return (
         <HomeLayout>
