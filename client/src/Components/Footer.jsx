@@ -25,11 +25,11 @@ const Footer = () => {
                         <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsEnvelope /><span>healthystudybhu@gmail.com</span></a>
                         <a href="" className='flex items-center gap-2 text-[0.83rem] font-[400] tracking-wide'><BsTelephone /><span>+91 9140827671</span></a>
                         <div className='flex gap-6 mt-3'>
-                            <Link to="" target='_blank' className='text-[17px]'><BsLinkedin /></Link>
-                            <Link to="" target='_blank' className='text-[17px]'><BsFacebook /></Link>
-                            <Link to="" target='_blank' className='text-[17px]'><BsWhatsapp /></Link>
-                            <Link to="" target='_blank' className='text-[17px]'><BsInstagram /></Link>
-                            <Link to="" target='_blank' className='text-[17px]'><BsTwitter /></Link>
+                            <Link to="" target='_blank' className='text-[17px] text-[#0C61BF]'><BsLinkedin /></Link>
+                            <Link to="https://www.facebook.com/profile.php?id=61557356498283" target='_blank' className='text-[17px] text-[#0862F7]'><BsFacebook /></Link>
+                            <Link to="https://wa.me/9140827671" target='_blank' className='text-[17px] text-[#24CC63]'><BsWhatsapp /></Link>
+                            <Link to="" target='_blank' className='text-[17px] text-[#F50864]'><BsInstagram /></Link>
+                            <Link to="" target='_blank' className='text-[17px] text-[#1C9BE9]'><BsTwitter /></Link>
                         </div>
                     </div>
                     <div className='flex flex-col gap-8 sm:flex-row sm:justify-around sm:mr-5 md:mr-[5rem] md:gap-[5rem]'>
