@@ -133,9 +133,7 @@ export const forgotPassword = createAsyncThunk('user/forgot-password', async (da
         let res = axiosInstance.post(`/user/forgot-password`, data)
         toast.promise(res, {
             loading: "Sending password reset link to registered mail!",
-            success: (data) => {
-                return data?.data.message
-            },
+            success: "Reset password link sent on you registered email",
             error: "Failed to send reset link"
         })
         res = await res;
@@ -149,10 +147,8 @@ export const resetPasswords = createAsyncThunk('user/reset-password', async (dat
     try {
         let res = axiosInstance.post(`user/reset-password/${data[0]}`, data[1])
         toast.promise(res, {
-            loading: "Reseting Password!",
-            success: (data) => {
-                return data?.data.message
-            },
+            loading: "Updating Password!",
+            success: "Password updated successfully",
             error: "Failed to reset password"
         })
         res = await res;
