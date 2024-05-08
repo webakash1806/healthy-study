@@ -78,7 +78,7 @@ const ResetPassword = () => {
 
                     <button type='submit' className='bg-red border border-red hover:bg-white hover:text-red hover:shadow-[2px_2px_5px_#131D28] transition-all duration-200 mt-2 text-white w-full rounded-md p-[5px] font-semibold text-[1.05rem]'>Reset password</button>
 
-                    <p className='mt-2'>Don&#39;t have an account? <Link to='/zenstudy/register' className='underline text-red'>Register</Link></p>
+                    <p className='mt-2'>Don&#39;t have an account? <Link to='/register' className='underline text-red'>Register</Link></p>
                 </form>
 
             </div>
