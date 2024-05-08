@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { toast } from 'react-hot-toast'
+import { toast } from 'react-toastify'
 import { BsPersonFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
