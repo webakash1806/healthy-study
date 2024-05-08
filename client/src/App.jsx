@@ -18,6 +18,8 @@ import Contact from './Pages/Contact'
 import About from './Pages/About'
 import Success from './Components/Success'
 import Failed from './Components/Failed'
+import ForgetPassword from './Pages/UserAuth/ForgetPassword'
+import ResetPassword from './Pages/UserAuth/ResetPassword'
 const App = () => {
   return (
     <Routes>
@@ -27,6 +29,9 @@ const App = () => {
       <Route path='/admin/dashboard' element={<Dashboard />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
+      <Route path='/forgot-password' element={<ForgetPassword />} />
+      <Route path='/reset-password/:resetToken' element={<ResetPassword />} />
+
 
       <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}>
         <Route path='/me' element={<Profile />} />

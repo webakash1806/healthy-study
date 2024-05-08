@@ -21,7 +21,14 @@ const Dashboard = () => {
 
 
     useEffect(() => {
-        dispatch(getOrder())
+        const timeOut = setTimeout(() => {
+            dispatch(getOrder())
+        }, 2000);
+
+        return () => {
+            clearTimeout(timeOut)
+        }
+
     }, [orderData])
     return (
         <HomeLayout>

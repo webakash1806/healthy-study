@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 import axiosInstance from '../../Helpers/axiosInstance.js'
@@ -130,7 +130,7 @@ export const changePassword = createAsyncThunk('user/update-password', async (da
 
 export const forgotPassword = createAsyncThunk('user/forgot-password', async (data) => {
     try {
-        let res = axiosInstance.post(`user/forgot-password`, data)
+        let res = axiosInstance.post(`/user/forgot-password`, data)
         toast.promise(res, {
             loading: "Sending password reset link to registered mail!",
             success: (data) => {

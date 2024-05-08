@@ -71,7 +71,7 @@ const HomeLayout = ({ children }) => {
                                     <li><Link to='/contact'>Contact</Link></li>
                                     <li><div onClick={handleOrder}>My orders</div></li>
                                     <div className='ml-6'>
-                                        {!userData?.email ?
+                                        {!fullName ?
                                             <div className='flex items-center justify-center gap-3 '>
                                                 <Link to='/login' className='btn btn-primary text-white btn-sm rounded-md px-5 text-[1.03rem] tracking-wide'>
                                                     Login
@@ -119,7 +119,7 @@ const HomeLayout = ({ children }) => {
 
                             </div>
                             <div className='mb-6'>
-                                {!userData?.email ?
+                                {!fullName ?
                                     <div className='flex items-center justify-center gap-3 mt-4 '>
                                         <Link to='/login'
                                             className='btn btn-primary text-white btn-sm rounded-md px-9 text-[1.03rem] tracking-wide'>

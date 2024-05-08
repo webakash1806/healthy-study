@@ -25,7 +25,13 @@ const OrderPage = () => {
 
 
     useEffect(() => {
-        dispatch(getMyOrders())
+        const timeOut = setTimeout(() => {
+            dispatch(getMyOrders())
+        }, 2000);
+
+        return () => {
+            clearTimeout(timeOut)
+        }
     }, [])
     return (
         <HomeLayout>
