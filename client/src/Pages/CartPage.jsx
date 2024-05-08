@@ -7,7 +7,7 @@ import { IoBagHandle } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md";
 import { userProfile } from '../Redux/Slices/AuthSlice'
 import { getRazorpayId, orderFood, verifyPayment } from '../Redux/Slices/RazorpaySlice'
-import toast from 'react-hot-toast'
+import {  toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom'
 import { getUserOrder } from '../Redux/Slices/OrderSlice'
 import SkeletonLoading from '../Components/SkeletonLoading'

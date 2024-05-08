@@ -14,6 +14,8 @@ const HomeLayout = ({ children }) => {
 
     const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn)
     const fullName = useSelector((state) => state?.auth?.data?.fullName)
+    const userData = useSelector((state) => state?.auth?.data)
+    console.log(userData);
     const avatar = useSelector((state) => state?.auth?.data?.avatar)
     const role = useSelector((state) => state?.auth?.role)
 
@@ -69,7 +71,7 @@ const HomeLayout = ({ children }) => {
                                     <li><Link to='/contact'>Contact</Link></li>
                                     <li><div onClick={handleOrder}>My orders</div></li>
                                     <div className='ml-6'>
-                                        {!isLoggedIn ?
+                                        {!userData?.email ?
                                             <div className='flex items-center justify-center gap-3 '>
                                                 <Link to='/login' className='btn btn-primary text-white btn-sm rounded-md px-5 text-[1.03rem] tracking-wide'>
                                                     Login
@@ -103,7 +105,7 @@ const HomeLayout = ({ children }) => {
                         <ul className="justify-between min-h-full p-4 font-semibold text-black bg-light menu w-80 text-[1.02rem]">
                             {/* Sidebar content here */}
                             <div>
-                                <Link to={'/'} className="m-[0_auto] border-b mb-6 w-full pb-2 flex items-center justify-around border-slate-500"><img className='w-[9.5rem]' src={logo} alt="" /></Link>
+                                <Link to={'/'} className="m-[0_auto] border-b mb-6 w-full pb-2 flex items-center justify-around border-slate-500"><img className='w-[5rem]' src={logo} alt="" /></Link>
                                 <li><Link to='/'>Home</Link></li>
                                 {isLoggedIn && role === 'ADMIN' && (
                                     <li><Link to='/admin/dashboard'>Dashboard</Link></li>
@@ -117,7 +119,7 @@ const HomeLayout = ({ children }) => {
 
                             </div>
                             <div className='mb-6'>
-                                {!isLoggedIn ?
+                                {!userData?.email ?
                                     <div className='flex items-center justify-center gap-3 mt-4 '>
                                         <Link to='/login'
                                             className='btn btn-primary text-white btn-sm rounded-md px-9 text-[1.03rem] tracking-wide'>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import toast from 'react-hot-toast'
+import {  toast } from 'react-toastify';
 import { BsPersonCircle, BsPersonFill } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'

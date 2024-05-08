@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import toast from 'react-hot-toast'
+import {  toast } from 'react-toastify';
 import { BsArrowLeft } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
