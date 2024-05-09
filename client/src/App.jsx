@@ -21,6 +21,7 @@ import Failed from './Components/Failed'
 import ForgetPassword from './Pages/UserAuth/ForgetPassword'
 import ResetPassword from './Pages/UserAuth/ResetPassword'
 import AccessDenied from './Pages/AccessDenied'
+import PageNotFound from './Pages/PageNotFound'
 const App = () => {
   return (
     <Routes>
@@ -32,6 +33,7 @@ const App = () => {
       <Route path='/denied' element={<AccessDenied />} />
       <Route path='/forgot-password' element={<ForgetPassword />} />
       <Route path='/reset-password/:resetToken' element={<ResetPassword />} />
+      <Route path="*" element={<PageNotFound />} />
 
 
       <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}>
