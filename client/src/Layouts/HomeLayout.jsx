@@ -15,7 +15,6 @@ const HomeLayout = ({ children }) => {
     const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn)
     const fullName = useSelector((state) => state?.auth?.data?.fullName)
     const userData = useSelector((state) => state?.auth?.data)
-    console.log(userData);
     const avatar = useSelector((state) => state?.auth?.data?.avatar)
     const role = useSelector((state) => state?.auth?.role)
 

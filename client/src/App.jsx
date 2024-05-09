@@ -20,15 +20,16 @@ import Success from './Components/Success'
 import Failed from './Components/Failed'
 import ForgetPassword from './Pages/UserAuth/ForgetPassword'
 import ResetPassword from './Pages/UserAuth/ResetPassword'
+import AccessDenied from './Pages/AccessDenied'
 const App = () => {
   return (
     <Routes>
       <Route path='/' element={<HomePage />} />
       <Route path='/register' element={<SignupPage />} />
       <Route path='/login' element={<LoginPage />} />
-      <Route path='/admin/dashboard' element={<Dashboard />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
+      <Route path='/denied' element={<AccessDenied />} />
       <Route path='/forgot-password' element={<ForgetPassword />} />
       <Route path='/reset-password/:resetToken' element={<ResetPassword />} />
 
@@ -47,6 +48,7 @@ const App = () => {
       <Route element={<RequireAuth allowedRoles={['ADMIN']} />}>
         <Route path='/product/add' element={<CreateProduct />} />
         <Route path='/product/edit' element={<UpdateProduct />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
       </Route>
 
     </Routes>
