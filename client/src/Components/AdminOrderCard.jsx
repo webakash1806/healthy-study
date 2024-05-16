@@ -11,12 +11,10 @@ const AdminOrderCard = ({ data }) => {
 
     const handleActionOut = async () => {
         dispatch(updateOrder({ id: data?._id, status: "Out For Delivery" }))
-        location.reload();
     }
 
     const handleActionDelivered = async () => {
         dispatch(updateOrder({ id: data?._id, status: "Delivered" }))
-        location.reload();
     }
 
     return (

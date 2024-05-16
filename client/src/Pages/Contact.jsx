@@ -13,21 +13,21 @@ const Contact = () => {
                 >
                     <p className='py-[1rem] text-[2.4rem] bg-clip-text text-transparent bg-[linear-gradient(to_right,#35C8F2,#27B872)] md:text-[3rem]  font-mono font-bold text-center'>Let's have a talk</p>
                     <div className='text-black grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 text-[17px] w-fit'>
-                        <a href={`tel:9140827671`} className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold  gap-2 bg-white '>
+                        <a href={`tel:6207234759`} className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold  gap-2 bg-white '>
                             <FaPhoneAlt className='text-[#1d7f20] text-[20px]' />
-                            <p>+91 9140827671</p>
+                            <p>+91 6207234759</p>
                         </a>
-                        <a href={`mailto:healthystudybhu@gmail.com`} className='w-[19srem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a href={`mailto:itsakash18.06@gmail.com`} className='w-[19srem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <IoMdMail className='text-[#EA4335] text-[20px]' />
-                            <p>healthystudybhu@gmail.com</p>
+                            <p>snacky@gmail.com</p>
                         </a>
-                        <a target={`_blank`} href="https://wa.me/9140827671" className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a target={`_blank`} href="https://wa.me/6207234759" className='w-[16rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <FaWhatsapp className='text-[#161a16] text-[20px]' />
-                            <p>+91 9140827671 </p>
+                            <p>+91 6207234759 </p>
                         </a>
-                        <a target={`_blank`} href="https://www.facebook.com/profile.php?id=61557356498283" className='w-[18rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
+                        <a target={`_blank`} href="" className='w-[18rem] cursor-pointer rounded-md p-3 flex items-center justify-center font-semibold gap-2 bg-white '>
                             <CiFacebook className='text-[#3766ff] text-[20px]' />
-                            <p>healthystudybhu@gmail.com</p>
+                            <p>Snacky</p>
                         </a>
                     </div>
                     <form action="https://formspree.io/f/myyqbdzv" method='POST' className='flex flex-col items-center justify-center w-screen gap-4 pt-6 text-white'>
@@ -46,7 +46,7 @@ const Contact = () => {
                                     placeholder='your email'
                                     autoComplete='off'
                                     required className='bg-transparent border-b p-[0.5px_5px] w-[14rem] text-center text-[17px] text-[#17fbd1] m-1 outline-none' />
-                                
+
                                 and
                                 {/* <br>my phone Number is</br>
                                 <input type="number" placeholder='your number' /> */}
@@ -62,7 +62,7 @@ const Contact = () => {
                         </div>
                     </form>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.9835344276644!2d82.97985107359912!3d25.271139328705143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31b7a920b513%3A0x2cb948837eeea5f8!2sAtal%20Incubation%20Centre!5e0!3m2!1sen!2sin!4v1714390559539!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3340570259898!2d84.3639890744535!3d24.749732978001735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398cfc32c2f29197%3A0x61978b7662604d47!2sV-Mart%20-%20Aurangabad!5e0!3m2!1sen!2sin!4v1715850706414!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </HomeLayout>
     )

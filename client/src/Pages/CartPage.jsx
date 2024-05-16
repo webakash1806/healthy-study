@@ -7,11 +7,11 @@ import { IoBagHandle } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md";
 import { userProfile } from '../Redux/Slices/AuthSlice'
 import { getRazorpayId, orderFood, verifyPayment } from '../Redux/Slices/RazorpaySlice'
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom'
 import { getUserOrder } from '../Redux/Slices/OrderSlice'
 import SkeletonLoading from '../Components/SkeletonLoading'
-import logoImg from '../assets/healthyStudy.jpg'
+import logoImg from '../assets/Img/logo.png'
 
 const CartPage = () => {
     const cartData = useSelector((state) => state?.cart)
@@ -93,7 +93,7 @@ const CartPage = () => {
                 key: razorpayKey, // Enter the Key ID generated from the Dashboard
                 amount: totalBill * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                 currency: "INR",
-                name: "Healthy Study", //your business name
+                name: "Snacky", //your business name
                 description: "",
                 image: logoImg,
                 order_id: order_id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
@@ -116,7 +116,7 @@ const CartPage = () => {
                     "contact": userData?.data?.phoneNumber  //Provide the customer's phone number for better conversion rates 
                 },
                 notes: {
-                    "address": "Healthy Study Office"
+                    "address": "Snacky Office"
                 },
                 theme: {
                     "color": "#FC683E"

@@ -23,7 +23,7 @@ const Dashboard = () => {
     useEffect(() => {
         const timeOut = setTimeout(() => {
             dispatch(getOrder())
-        }, 2000);
+        }, 500);
 
         return () => {
             clearTimeout(timeOut)
