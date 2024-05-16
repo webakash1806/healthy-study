@@ -25,7 +25,7 @@ import PageNotFound from './Pages/PageNotFound'
 const App = () => {
   return (
     <Routes>
-{/*       <Route path='/' element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
       <Route path='/register' element={<SignupPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/contact' element={<Contact />} />
@@ -51,7 +51,7 @@ const App = () => {
         <Route path='/product/add' element={<CreateProduct />} />
         <Route path='/product/edit' element={<UpdateProduct />} />
         <Route path='/admin/dashboard' element={<Dashboard />} />
-      </Route> */}
+      </Route>
 
     </Routes>
   )
